@@ -26,7 +26,6 @@
                   <Skeleton />
                 </span>
                 <span v-else>
-                  <img style="width:20px;vertical-align:text-bottom" src="@/assets/images/zy1.svg" alt="">
                   {{ price }} ETH
                 </span>
               </span>
@@ -50,7 +49,6 @@
             </div>
             <div class="item count">
               <span>{{ t("market.count") }}</span> <span>
-                <!-- <img style="width:20px;vertical-align:text-bottom" src="@/assets/images/zy1.svg" alt="" /> -->
                 {{ fixedNumber(count * price) }}
               </span>
               <button :class="status == 3 ? 'submit-btn b am disabled' : 'submit-btn b am'"
@@ -60,8 +58,6 @@
                   <img class="loading" src="@/assets/images/loading.png" alt="" srcset="" />
                 </template>
                 <template v-else>
-                  <!-- <img style="width:20px;vertical-align:middle;margin-right:5px"
-                        src="@/assets/images/market_buy@2x.png" alt="">  -->
                   <span style="vertical-align:middle">{{
                     t("market.purchase")
                   }}</span>
