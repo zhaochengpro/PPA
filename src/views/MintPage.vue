@@ -18,9 +18,7 @@
             <div class="item goods-name">
               <h2>{{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}</h2>
               <div class="ms" style="text-align:justify">
-                Project Description: Memories of Qilin is inspired by traditional East Asian art. It channels the sense
-                of movement and fluidity found in classical Chinese brushwork, while drawing from the colors, patterns,
-                and forms of ukiyo-e woodblock prints.
+                Pressure Pig Association is a project on Ethereum with a total of 9,999 and a launch date of March-April 2023. More than one hundred different traits. Keep tuning for further info!
               </div>
             </div>
             <div class="item price">

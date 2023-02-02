@@ -277,9 +277,7 @@ body {
 
 .web-header .logo {
   display: block;
-  width: 200px;
-  height: 54px;
-  /* background: url(/src/assets/images/logo.jpg) 0 -57px /83% no-repeat; */
+  width: 130px;
   position: relative;
 }
 
@@ -347,8 +345,8 @@ body {
 
 .video_content video {
   width: 100vw;
-  /* height: 100%; */
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transform-origin: 50% 0;
 }
 
 .web-header .options li + li {
@@ -1495,11 +1493,9 @@ button:disabled {
   display: flex;
   width: 70vw;
   min-height: 540px;
-  /* background: pink; */
   box-shadow: 1px 1px 15px #fff;
   border-radius: 32px;
   border: 1px solid pink;
-  border-bottom: none;
   padding: 52px;
   margin: 0 auto;
   transition: all 0.3s linear;
