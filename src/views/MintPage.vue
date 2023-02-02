@@ -1,5 +1,10 @@
 <template>
   <Header />
+  <div class="video_content">
+    <video loop autoplay>
+      <source src="@/assets/index.mp4" type="video/mp4" />
+    </video>
+  </div>
   <div class="wrap">
     <div class="container">
       <div class="tab-content">
@@ -247,6 +252,18 @@ const closeMessage = () => {
 </script>
 
 <style lang="scss" scoped>
+body,html {
+  overflow-y: scroll;
+
+}
+.video_content {
+  position: absolute;
+  z-index: -1;
+  filter: blur(3px);
+}
+.wrap {
+  z-index: 100
+}
 .loading {
   animation: loading 3s infinite linear;
   top: 8px;
@@ -255,7 +272,9 @@ const closeMessage = () => {
 }
 
 .container {
-  height: 100vh;
+  height: auto;
+  padding-bottom: 35px;
+  background: url(../../src/assets/index.mp4);
 
   .tab-content {
     margin: 0 auto;

@@ -91,6 +91,7 @@ body {
 
 body, html {
   scroll-behavior:smooth;
+
 }
 
 .b {
@@ -123,14 +124,13 @@ body, html {
 html,
 body {
   min-width: 1280px;
+  overflow: hidden;
 }
 
 .web-container {
-  /* max-width: 1920px; */
   margin: 0 auto;
-  /* overflow: hidden; */
-  /* background-color: #9d78db; */
-  overflow-x: hidden;
+
+  background: url("../index.mp4");
 }
 
 /*tab*/
@@ -263,7 +263,6 @@ body {
   position: fixed;
   z-index: 3;
   width: 100%;
-  background-color: #000;
 }
 
 .web-header .wrap {
@@ -347,8 +346,8 @@ body {
 }
 
 .video_content video {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  /* height: 100%; */
   transform: scale(1.2);
 }
 
@@ -1492,20 +1491,34 @@ button:disabled {
 }
 
 .goods-buy {
+  position: relative;
   display: flex;
   width: 70vw;
   min-height: 540px;
   /* background: pink; */
   box-shadow: 1px 1px 15px #fff;
   border-radius: 32px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
   border: 1px solid pink;
   border-bottom: none;
   padding: 52px;
   margin: 0 auto;
   transition: all 0.3s linear;
-  animation: breath 2s infinite;
+  animation: breath 1s infinite;
+  overflow: hidden;
+}
+
+.goods-buy::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(1px);
+  background: #fff;
+  opacity: 0.6;
 }
 
 @keyframes breath {
@@ -1521,7 +1534,7 @@ button:disabled {
 }
 
 .goods-buy .goods-cover {
-  width: 400px;
+  width: 330px;
   border-radius: 22px;
   background: #000;
   overflow: hidden;
@@ -1546,10 +1559,11 @@ button:disabled {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: pink;
 }
 
 .goods-buy .goods-info .ms {
-  color: #c2a0a0;
+  color: #fff;
 }
 
 .goods-buy .goods-info .price {
@@ -2295,7 +2309,7 @@ button:disabled {
   width: 100vw;
   /* height: 100vh; */
   /* background-color: #9d78db; */
-  background-color: #000;
+  /* background-color: #000; */
 }
 .luck-draw-box .tips .container {
   user-select: none;
@@ -2700,7 +2714,7 @@ button:disabled {
 }
 
 .accordion .column-card {
-  background: #1c1c1e;
+  background: #ffffff5c;
   border-radius: 12px;
   padding: 0 24px;
   margin-bottom: 12px;
@@ -2715,7 +2729,8 @@ button:disabled {
 }
 
 .accordion .column-card:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #fff;
+  color: #000;
 }
 
 .accordion .column-card > .title {

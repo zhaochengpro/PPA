@@ -2,7 +2,7 @@
   <Header />
   <div class="video_content">
     <video loop autoplay>
-      <source src="@/assets/clock.mp4" type="video/mp4" />
+      <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
 </template>

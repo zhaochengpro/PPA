@@ -1,5 +1,10 @@
 <template>
   <Header />
+  <div class="video_content">
+    <video loop autoplay>
+      <source src="@/assets/index.mp4" type="video/mp4" />
+    </video>
+  </div>
   <div class="web-main">
     <div class="faq">
       <div class="wrap">
@@ -239,5 +244,12 @@ function cardChange(index) {
 </script>
 
 <style lang="scss" scoped>
-
+.video_content {
+  position: absolute;
+  z-index: -1;
+  filter: blur(3px);
+}
+.wrap {
+  z-index: 100
+}
 </style>

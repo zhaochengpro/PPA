@@ -1,5 +1,10 @@
 <template>
   <Header />
+  <div class="video_content">
+    <video loop autoplay>
+      <source src="@/assets/index.mp4" type="video/mp4" />
+    </video>
+  </div>
   <div class="team">
     <div class="wrap">
       <div class="container">
@@ -14,7 +19,8 @@
 
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
@@ -28,7 +34,8 @@
             </div>
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
@@ -42,7 +49,8 @@
             </div>
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
@@ -56,7 +64,8 @@
             </div>
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
@@ -70,9 +79,11 @@
             </div>
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.lot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.lot of
+              tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
           </div>
           <div class="item">
@@ -84,7 +95,8 @@
             </div>
             <div class="member-info">
               If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
+              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
               the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
             </div>
@@ -98,25 +110,35 @@
 
 <script setup>
 import Header from '@/components/Header.vue';
-import { reactive } from 'vue';
+import { onMounted, reactive } from 'vue';
 import { useI18n } from '@/locales';
 import { useRouter } from 'vue-router';
 
 const t = useI18n();
 const router = useRouter();
 
+onMounted(() => {
+  // document.getElementById()
+});
+
 </script>
 
 <style lang="scss" scoped>
+.video_content {
+  position: absolute;
+  z-index: -1;
+  filter: blur(3px);
+}
+
 .wrap {
-  // margin-top: 150px;
+  z-index: 100
 }
 
 .team-list {
-  // display: flex;
   padding: 0 80px;
   margin-top: 90px;
   width: 100%;
+  height: 90vh;
 
   .item {
     opacity: 0.5;
@@ -125,7 +147,7 @@ const router = useRouter();
     position: relative;
     height: 100px;
     display: flex;
-    margin-top: 70px;
+    margin-top: 20px;
     background: #ffffff26;
     padding: 30px;
     box-sizing: content-box;
@@ -133,9 +155,8 @@ const router = useRouter();
     transition: all 0.1s ease-in-out;
 
     .avator {
-      // width: 100px;
-      // height: 100px;
       display: flex;
+
       img {
         border-radius: 50%;
         width: 100px;
@@ -230,8 +251,10 @@ const router = useRouter();
   }
 
   .item:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    opacity: 0.8;
+    background: #fff;
+    transform: scale(1.05);
+    color: #000;
   }
 
   .item:nth-of-type(2n + 1) {
