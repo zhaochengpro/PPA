@@ -11,13 +11,33 @@
         <div class="goods-buy">
           <div class="goods-cover">
             <div class="imgbox">
-              <img src="@/assets/images/picture5.jpg" />
+              <ul>
+                <li>
+                  <img src="@/assets/images/picture2.jpg" />
+                </li>
+                <li>
+                  <img src="@/assets/images/picture3.jpg" />
+                </li>
+                <li>
+                  <img src="@/assets/images/picture4.jpg" />
+                </li>
+                <li>
+                  <img src="@/assets/images/picture5.jpg" />
+                </li>
+                <li>
+                  <img src="@/assets/images/picture6.jpg" />
+                </li>
+                <li>
+                  <img src="@/assets/images/picture2.jpg" />
+                </li>
+              </ul>
+              
             </div>
           </div>
           <div class="goods-info">
             <div class="item goods-name">
               <h2>{{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}</h2>
-              <div class="ms" style="text-align:justify">
+              <div class="ms" >
                 Pressure Pig Association is a project on Ethereum with a total of 9,999 and a launch date of March-April 2023. More than one hundred different traits. Keep tuning for further info!
               </div>
             </div>

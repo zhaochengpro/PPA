@@ -301,11 +301,12 @@ body {
 }
 
 .web-header .nav .nav-menu li {
-  margin-left: 20px;
+  margin-left: 80px;
   font-size: 16px;
 }
 
 .web-header .nav .nav-menu a {
+  font-size: 20px;
   display: block;
   padding: 5px 5px;
   transition: all 0.3s;
@@ -321,7 +322,7 @@ body {
 }
 
 .web-header .tools-bar {
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -364,6 +365,9 @@ body {
   transform: scale(1.2);
 }
 
+.web-header .options .link0 {
+  background: url(/src/assets/images/discord.png)  50% / 16px no-repeat;
+}
 .web-header .options .link1 {
   background: url(../images/tw.png) 0 0 / cover no-repeat;
 }
@@ -473,7 +477,7 @@ body {
   display: block;
   line-height: 30px;
   color: pink;
-  border: 1px solid pink;
+  border: 2px solid pink;
   border-radius: 8px;
   padding: 0 11px;
   margin-left: 16px;
@@ -1493,7 +1497,7 @@ button:disabled {
   display: flex;
   width: 70vw;
   min-height: 540px;
-  background: #FDD;
+  font-size: 18px;
   box-shadow: 1px 1px 15px #fff;
   border-radius: 32px;
   border: 1px solid #fff;
@@ -1531,20 +1535,22 @@ button:disabled {
 }
 
 .goods-buy .goods-cover {
-  width: 420px;
+  width: 436px;
   border-radius: 22px;
   overflow: hidden;
+  position: relative;
+  left: -50px;
+  position: relative;
 }
 
 .goods-buy .goods-cover .imgbox {
   width: 100%;
   height: 100%;
-
+  border-right: 1px solid #fff;
 }
 
 .goods-buy .goods-info {
   flex: 1;
-  margin-left: 40px;
 }
 
 .goods-buy .goods-info > .item + .item {
@@ -1552,7 +1558,7 @@ button:disabled {
 }
 
 .goods-buy .goods-info h2 {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #e86a80;
@@ -1604,7 +1610,7 @@ button:disabled {
   background: #e86a80;
   border-radius: 12px;
   opacity: 0.9;
-  margin-top: 50px;
+  margin-top: 30px;
   border: 2px solid #fff;
 }
 
@@ -2016,7 +2022,34 @@ button:disabled {
   height: 100%;
   border-radius: 10px;
 }
+.goods-cover .imgbox ul {
+  position: absolute;
+  width: 2616px;
+  display: flex;
+  /* transition: all 0.3s linear; */
+  animation: loop 15s ease-in-out infinite;
+}
 
+@keyframes loop {
+  0%,15%{
+		left: 0;
+	}
+	20%,35%{
+		left: -100%;
+	}
+	40%,55%{
+		left: -200%;
+	}
+	60%,75%{
+		left: -300%;
+	}
+	80%,95%{
+		left: -400%;
+	}
+	100%{
+		left: -500%;
+	}
+}
 .checker {
   position: absolute;
   top: 18px;
@@ -2722,6 +2755,7 @@ button:disabled {
 .accordion .column-card.active > .content{
   height: fit-content;
   padding-bottom: 16px;
+  color: #fff;
 }
 
 .accordion .column-card:hover {
@@ -2729,8 +2763,12 @@ button:disabled {
   color: #000;
 }
 
+.accordion .column-card:hover > .content {
+  color: #000;
+}
+
 .accordion .column-card > .title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   padding: 15px 0;
 }

@@ -6,44 +6,62 @@
     </video>
   </div>
   <div class="team">
-      <div class="container">
-        <div class="team-list">
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/picture4.jpg" alt="">
-              <span class="name">
-                Oscar. G
-              </span>
-            </div>
+    <div class="container">
+      <div class="team-list">
+        <div class="item">
+          <div class="avator">
+            <img src="@/assets/images/picture4.jpg" alt="">
+            <span class="name">
+              Oscar. G
+            </span>
+          </div>
 
-            <div class="member-info">
-              Graduated from UAL, and he is an atypical art student who prefers materialistic pleasures to artistic and spiritual pursuits. His infinite desires bring infinite pain, and his limited salary is overdrawn every month before he even gets his hands on it. Oscar felt that life was eating away at him, staying up late, overeating, and overworking, and even his hairline was moving back. Through Web3, Oscar hopes to meet and heal people in the same situation with the design of the pressure pig. Come on, keep it real! Is it vulgar to link art with material things?
-            </div>
+          <div class="member-info">
+            Graduated from UAL, and he is an atypical art student who prefers materialistic pleasures to artistic and
+            spiritual pursuits. His infinite desires bring infinite pain, and his limited salary is overdrawn every
+            month before he even gets his hands on it. Oscar felt that life was eating away at him, staying up late,
+            overeating, and overworking, and even his hairline was moving back. Through Web3, Oscar hopes to meet and
+            heal people in the same situation with the design of the pressure pig. Come on, keep it real! Is it vulgar
+            to link art with material things?
           </div>
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/picture3.jpg" alt="">
-              <span class="name">
-                Steven Kim
-              </span>
-            </div>
-            <div class="member-info">
-              Graduated from the University of Sheffield as a graduate student in Marketing and Management. However, after graduation, he encountered the COVID-19 pandemic, which made this young man carry unprecedented pressure of workplace disappointment, family pressure, and social environmental oppression. By chance, he came into contact with the Web3 industry and crypto, but in a bear market, Steven watched the savings in his wallet gradually go to zero, and the pop-up messages were all about liquidation and stop losses! The accumulation of all kinds of pressure made this young man on the verge of collapse! All kinds of news are saying that the bull market is coming, and how wonderful the world is, but is it really the case? Why does he see all kinds of people full of stress, wearing masks and struggling to live? Stop wearing masks and preaching about how wonderful the world is! Wouldn't it be nice to be real and face the pressure head-on?
-            </div>
+        </div>
+        <div class="item">
+          <div class="avator">
+            <img src="@/assets/images/picture3.jpg" alt="">
+            <span class="name">
+              Steven Kim
+            </span>
           </div>
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/picture6.jpg" alt="">
-              <span class="name">
-                Kyle. M
-              </span>
-            </div>
-            <div class="member-info">
-              Graduated from UPM and after working in the traditional industry for years, Kyle found that his career still hadn't taken off. He hated the atmosphere of the workplace - everyone was working overtime ineffectively and kissing the boss's ass. At a chance web3 party, Kyle met Oscar and Steven. The like-minded trio decided to quit their jobs and use all their savings to do this project. PPA is actually a reflection of each of us, because everyone has their own pressure! That's why we need PPA, where we understand each other, embrace each other, encourage each other, and face all kinds of stress in real life together!
-            </div>
+          <div class="member-info">
+            Graduated from the University of Sheffield as a graduate student in Marketing and Management. However, after
+            graduation, he encountered the COVID-19 pandemic, which made this young man carry unprecedented pressure of
+            workplace disappointment, family pressure, and social environmental oppression. By chance, he came into
+            contact with the Web3 industry and crypto, but in a bear market, Steven watched the savings in his wallet
+            gradually go to zero, and the pop-up messages were all about liquidation and stop losses! The accumulation
+            of all kinds of pressure made this young man on the verge of collapse! All kinds of news are saying that the
+            bull market is coming, and how wonderful the world is, but is it really the case? Why does he see all kinds
+            of people full of stress, wearing masks and struggling to live? Stop wearing masks and preaching about how
+            wonderful the world is! Wouldn't it be nice to be real and face the pressure head-on?
+          </div>
+        </div>
+        <div class="item">
+          <div class="avator">
+            <img src="@/assets/images/picture6.jpg" alt="">
+            <span class="name">
+              Kyle. M
+            </span>
+          </div>
+          <div class="member-info">
+            Graduated from UPM and after working in the traditional industry for years, Kyle found that his career still
+            hadn't taken off. He hated the atmosphere of the workplace - everyone was working overtime ineffectively and
+            kissing the boss's ass. At a chance web3 party, Kyle met Oscar and Steven. The like-minded trio decided to
+            quit their jobs and use all their savings to do this project. PPA is actually a reflection of each of us,
+            because everyone has their own pressure! That's why we need PPA, where we understand each other, embrace
+            each other, encourage each other, and face all kinds of stress in real life together!
           </div>
         </div>
       </div>
+    </div>
   </div>
 
 </template>
@@ -76,10 +94,10 @@ onMounted(() => {
 
 .team-list {
   padding: 0 80px;
-    padding-top: 90px;
-    // width: 100%;
-    // padding-bottom: 70px;
-    box-sizing: content-box;
+  padding-top: 90px;
+  // width: 100%;
+  // padding-bottom: 70px;
+  box-sizing: content-box;
 
   .item {
     // opacity: 0.5;
@@ -106,10 +124,11 @@ onMounted(() => {
 
     .member-info {
       position: relative;
-      width: 600px;
+      width: 900px;
       display: inline-block;
-      vertical-align: middle;
       overflow: hidden;
+      text-align: justify;
+      padding: px 0px;
     }
 
     // .member-info::after {

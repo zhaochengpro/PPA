@@ -18,6 +18,7 @@
 
       <div class="tools-bar">
         <ul class="options">
+          <li><a class="link0" href="#"></a></li>
           <li><a class="link1" href="#"></a></li>
           <li><a class="link2" href="#"></a></li>
           <li><a class="link3" href="#"></a></li>
@@ -127,7 +128,6 @@
 
     </div>
   </template>
-  <Message :content="content" v-model:visible="showTips" :status="messageStatus" />
 </template>
 
 <script setup>
@@ -137,8 +137,6 @@ import { useStore } from 'vuex';
 import { computed, nextTick, watch, onMounted, ref, unref } from 'vue';
 import { changeLocale, useI18n } from '@/locales';
 import { getQueryVariable, formatAccount } from "@/utils";
-import Message from '@/components/Message.vue';
-import { getInviterByAccount, updateInvitation } from '@/api';
 
 const t = useI18n();
 const messageStatus = ref("")
@@ -195,8 +193,8 @@ onMounted(() => {
 
   nextTick(async () => {
     store.commit('setWeb3Modal', web3modal.value);
-
-    if (web3modal.value.cachedProvider) {
+    console.log(web3modal.value.cachedProvider())
+    if (web3modal.value.cachedProvider() == "injected") {
       connect();
     }
   });
@@ -221,38 +219,6 @@ function changeMenuSwitch(data) {
   store.commit('setMenuSwitch', data);
 }
 
-
-function closeInviter() {
-  inviterVisible.value = false;
-}
-
-async function submitInviter() {
-  const { code, data } = await updateInvitation({
-    account: unref(account),
-    inviter: unref(inviterAccount),
-  });
-
-  if (code === 200) {
-    inviterAccount.value = '';
-    messageStatus.value = "Success";
-    content.value = "";
-    showTips.value = true;
-    closeMessage();
-    closeInviter();
-  } else if (code == 500) {
-    console.log(data);
-    messageStatus.value = "Failed";
-    content.value = data;
-    showTips.value = true;
-    closeMessage();
-  }
-}
-
-function closeMessage() {
-  setTimeout(() => {
-    showTips.value = false;
-  }, 3000)
-}
 </script>
 
 <style lang="scss" scoped>

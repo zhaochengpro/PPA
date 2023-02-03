@@ -19,40 +19,41 @@
           <div id="timeline">
             <div class="dot" id="one">
               <span></span>
-              <date>Step One</date>
+              <date>1</date>
               <p>In February 2023 PPA is officially founded and we welcome all pressured souls!</p>
             </div>
             <div class="dot" id="two">
               <span></span>
-              <date>Step Two</date>
+              <date>2</date>
               <p>In February 2023, the "Piggy's shelter" community was established, where holders share their stresses
                 and help each other relieve them through online and offline activities. "Piggy's shelter" is a safe
                 place in a stressful society.</p>
             </div>
             <div class="dot" id="three">
               <span></span>
-              <date>Step Three</date>
-              <p>In March - April 2023, PPA NFT launch, Holders holds numbered 1-999 PPA NFTs split the profits!</p>
+              <date>3</date>
+              <p>In March-April 2023, after the PPA NFT launch, holders hold numbered 1-999 PPA NFTs will split 10% of
+                the profit.</p>
             </div>
             <div class="dot" id="four">
               <span></span>
-              <date>Step Four</date>
+              <date>4</date>
               <p>In May 2023, establishment of PP DAO (PP DAO will select stress-related propositions and conduct
                 voting).</p>
             </div>
             <div class="dot" id="five">
               <span></span>
-              <date>Step Five</date>
+              <date>5</date>
               <p>In August 2023, PPA-SP NFT collection airdrop(long-term holder's benefit).</p>
             </div>
             <div class="dot" id="six">
               <span></span>
-              <date>Step Six</date>
+              <date>6</date>
               <p>In Sep-Nov 2023, fashion brand - PPA established!</p>
             </div>
             <div class="dot" id="seven">
               <span></span>
-              <date>Step Seven</date>
+              <date>7</date>
               <p>The PPA community will always exist in the Web3 world, and will always be there for you to face and
                 relieve stress with you! PPA will never RUG!</p>
             </div>
@@ -86,13 +87,13 @@ $lightGreen: rgb(117, 235, 223);
 
 div#timeline {
   background-color: #6ab0de;
-    margin-top: 50px;
-    height: 10px;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    padding: 0 66px;
+  margin-top: 50px;
+  height: 10px;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 66px;
 
   //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
   .inside {
@@ -105,6 +106,7 @@ div#timeline {
   }
 
   .dot {
+    position: relative;
     //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
     z-index: 99;
     transition: 0.3s ease-in-out;
@@ -176,9 +178,9 @@ div#timeline {
     }
 
     p {
-      width: 13vw;
+      width: 10vw;
       position: relative;
-      left: -70px;
+      left: -3vw;
     }
   }
 }
@@ -195,10 +197,10 @@ div#timeline {
 
 .roadmap {
   width: 100%;
-    height: 100vh;
-    padding-top: 100px;
-    position: relative;
-    box-sizing: border-box;
+  height: 780px;
+  padding-top: 100px;
+  position: relative;
+  box-sizing: border-box;
 
   .left-avator {
     width: 100%;
