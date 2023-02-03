@@ -11,7 +11,7 @@
         <div class="goods-buy">
           <div class="goods-cover">
             <div class="imgbox">
-              <img src="@/assets/images/Picture1.png" />
+              <img src="@/assets/images/picture5.jpg" />
             </div>
           </div>
           <div class="goods-info">

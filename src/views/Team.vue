@@ -6,104 +6,44 @@
     </video>
   </div>
   <div class="team">
-    <div class="wrap">
       <div class="container">
         <div class="team-list">
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/1.png" alt="">
+              <img src="@/assets/images/Picture4.jpg" alt="">
               <span class="name">
-                Micheal Negan
+                Oscar. G
               </span>
             </div>
 
             <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              Graduated from UAL, and he is an atypical art student who prefers materialistic pleasures to artistic and spiritual pursuits. His infinite desires bring infinite pain, and his limited salary is overdrawn every month before he even gets his hands on it. Oscar felt that life was eating away at him, staying up late, overeating, and overworking, and even his hairline was moving back. Through Web3, Oscar hopes to meet and heal people in the same situation with the design of the pressure pig. Come on, keep it real! Is it vulgar to link art with material things?
             </div>
           </div>
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/Picture1.png" alt="">
+              <img src="@/assets/images/Picture3.jpg" alt="">
               <span class="name">
-                Micheal Negan
+                Steven Kim
               </span>
             </div>
             <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              Graduated from the University of Sheffield as a graduate student in Marketing and Management. However, after graduation, he encountered the COVID-19 pandemic, which made this young man carry unprecedented pressure of workplace disappointment, family pressure, and social environmental oppression. By chance, he came into contact with the Web3 industry and crypto, but in a bear market, Steven watched the savings in his wallet gradually go to zero, and the pop-up messages were all about liquidation and stop losses! The accumulation of all kinds of pressure made this young man on the verge of collapse! All kinds of news are saying that the bull market is coming, and how wonderful the world is, but is it really the case? Why does he see all kinds of people full of stress, wearing masks and struggling to live? Stop wearing masks and preaching about how wonderful the world is! Wouldn't it be nice to be real and face the pressure head-on?
             </div>
           </div>
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/1.png" alt="">
+              <img src="@/assets/images/Picture6.jpg" alt="">
               <span class="name">
-                Micheal Negan
+                Kyle. M
               </span>
             </div>
             <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-            </div>
-          </div>
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/1.png" alt="">
-              <span class="name">
-                Micheal Negan
-              </span>
-            </div>
-            <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-            </div>
-          </div>
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/1.png" alt="">
-              <span class="name">
-                Micheal Negan
-              </span>
-            </div>
-            <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.lot of
-              tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-            </div>
-          </div>
-          <div class="item">
-            <div class="avator">
-              <img src="@/assets/images/1.png" alt="">
-              <span class="name">
-                Micheal Negan
-              </span>
-            </div>
-            <div class="member-info">
-              If the ownership slot of tokenId+1 is not explicitly set, that means the transfer initiator owns it.Set
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.the slot
-              of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
-              the slot of tokenId+1 explicitly in storage to maintain correctness for ownerOf(tokenId+1) calls.
+              Graduated from UPM and after working in the traditional industry for years, Kyle found that his career still hadn't taken off. He hated the atmosphere of the workplace - everyone was working overtime ineffectively and kissing the boss's ass. At a chance web3 party, Kyle met Oscar and Steven. The like-minded trio decided to quit their jobs and use all their savings to do this project. PPA is actually a reflection of each of us, because everyone has their own pressure! That's why we need PPA, where we understand each other, embrace each other, encourage each other, and face all kinds of stress in real life together!
             </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 
 </template>
@@ -136,31 +76,30 @@ onMounted(() => {
 
 .team-list {
   padding: 0 80px;
-  margin-top: 90px;
-  width: 100%;
-  height: 90vh;
+    padding-top: 90px;
+    // width: 100%;
+    // padding-bottom: 70px;
+    box-sizing: content-box;
 
   .item {
-    opacity: 0.5;
+    // opacity: 0.5;
     cursor: pointer;
     justify-content: space-between;
     position: relative;
-    height: 100px;
+    // height: 100px;
     display: flex;
     margin-top: 20px;
     background: #ffffff26;
-    padding: 30px;
+    padding: 13px 51px;
     box-sizing: content-box;
     border-radius: 10px;
     transition: all 0.1s ease-in-out;
 
     .avator {
-      display: flex;
-
       img {
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         vertical-align: middle;
       }
     }
@@ -185,8 +124,8 @@ onMounted(() => {
     // }
 
     .name {
-      line-height: 100px;
-      margin-left: 30px;
+      text-align: center;
+      display: block;
       opacity: 0.6;
     }
 

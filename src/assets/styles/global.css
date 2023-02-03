@@ -123,8 +123,8 @@ body, html {
 
 html,
 body {
-  min-width: 1280px;
-  overflow: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .web-container {
@@ -1493,6 +1493,7 @@ button:disabled {
   display: flex;
   width: 70vw;
   min-height: 540px;
+  background: #FDD;
   box-shadow: 1px 1px 15px #fff;
   border-radius: 32px;
   border: 1px solid pink;
@@ -1530,9 +1531,8 @@ button:disabled {
 }
 
 .goods-buy .goods-cover {
-  width: 330px;
+  width: 420px;
   border-radius: 22px;
-  background: #000;
   overflow: hidden;
 }
 
@@ -1555,7 +1555,7 @@ button:disabled {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: pink;
+  color: #e86a80;
 }
 
 .goods-buy .goods-info .ms {
@@ -1601,7 +1601,7 @@ button:disabled {
   text-align: center;
   font-size: 16px;
   color: #fff;
-  background: pink;
+  background: #e86a80;
   border-radius: 12px;
   opacity: 0.9;
   margin-top: 50px;
@@ -2730,7 +2730,7 @@ button:disabled {
 }
 
 .accordion .column-card > .title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   padding: 15px 0;
 }
