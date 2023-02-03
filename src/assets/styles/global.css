@@ -1496,7 +1496,7 @@ button:disabled {
   background: #FDD;
   box-shadow: 1px 1px 15px #fff;
   border-radius: 32px;
-  border: 1px solid pink;
+  border: 1px solid #fff;
   padding: 52px;
   margin: 0 auto;
   transition: all 0.3s linear;
