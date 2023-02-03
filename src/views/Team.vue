@@ -10,7 +10,7 @@
         <div class="team-list">
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/Picture4.jpg" alt="">
+              <img src="@/assets/images/picture4.jpg" alt="">
               <span class="name">
                 Oscar. G
               </span>
@@ -22,7 +22,7 @@
           </div>
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/Picture3.jpg" alt="">
+              <img src="@/assets/images/picture3.jpg" alt="">
               <span class="name">
                 Steven Kim
               </span>
@@ -33,7 +33,7 @@
           </div>
           <div class="item">
             <div class="avator">
-              <img src="@/assets/images/Picture6.jpg" alt="">
+              <img src="@/assets/images/picture6.jpg" alt="">
               <span class="name">
                 Kyle. M
               </span>
