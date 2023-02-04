@@ -99,7 +99,7 @@
   <p style="text-align:center">Support: team@ppa-nft.xyz | <a href="#" @click="showServices"
       style="text-decoration:underline">Term of services</a></p>
   <el-dialog v-model="visible" :show-close="false">
-    <template #header="{ close, titleId, titleClass }">
+    <template #header="{ titleId, titleClass }">
       <div class="my-header">
         <h4 :id="titleId" :class="titleClass" style="font-size:25px;text-align:center">Term of services</h4>
       </div>
@@ -167,7 +167,6 @@ import { useStore } from 'vuex';
 import Message from '@/components/Message.vue';
 import { caculateProof } from "@/utils/merkleProof.js";
 import { ElButton, ElDialog } from 'element-plus'
-import { CircleCloseFilled } from '@element-plus/icons-vue'
 
 const store = useStore();
 const visible = ref(false)
