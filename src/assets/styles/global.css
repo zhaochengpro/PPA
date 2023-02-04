@@ -124,7 +124,8 @@ body, html {
 html,
 body {
   width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .web-container {
@@ -1493,19 +1494,20 @@ button:disabled {
 }
 
 .goods-buy {
-  position: relative;
-  display: flex;
-  width: 70vw;
-  min-height: 540px;
-  font-size: 18px;
-  box-shadow: 1px 1px 15px #fff;
-  border-radius: 32px;
-  border: 1px solid #fff;
-  padding: 52px;
-  margin: 0 auto;
-  transition: all 0.3s linear;
-  animation: breath 1s infinite;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 880px;
+    height: 400px;
+    box-sizing: content-box;
+    font-size: 18px;
+    box-shadow: 1px 1px 15px #fff;
+    border-radius: 32px;
+    border: 1px solid #fff;
+    padding: 52px;
+    margin: 0 auto;
+    transition: all 0.3s linear;
+    animation: breath 1s infinite;
+    overflow: hidden;
 }
 
 .goods-buy::before {
@@ -2982,8 +2984,4 @@ button:disabled {
 }
 .auction .tbody {
   text-align: center;
-}
-
-.faq .wrap {
-  padding: 50px 70px;
 }
