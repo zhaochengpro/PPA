@@ -130,7 +130,7 @@
 
   </template>
 
-  <img class="mute-icon" :src="isMute ? '../src/assets/images/mute.png' : '../src/assets/images/nomute.png'" @click="toggleMute" alt="">
+  <img class="mute-icon" :src="isMute ? Mute : noMute" @click="toggleMute" alt="">
 
 </template>
 
@@ -141,6 +141,8 @@ import { useStore } from 'vuex';
 import { computed, nextTick, watch, onMounted, ref, unref } from 'vue';
 import { changeLocale, useI18n } from '@/locales';
 import { getQueryVariable, formatAccount } from "@/utils";
+import noMute from "@/assets/images/nomute.png"
+import Mute from "@/assets/images/mute.png"
 import bus from 'vue3-eventbus'
 const t = useI18n();
 const messageStatus = ref("")
