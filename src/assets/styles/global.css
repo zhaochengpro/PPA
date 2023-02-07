@@ -1547,7 +1547,7 @@ button:disabled {
 }
 
 .goods-buy .goods-cover {
-  width: 436px;
+  width: 390px;
   border-radius: 22px;
   overflow: hidden;
   position: relative;
@@ -2036,7 +2036,7 @@ button:disabled {
 }
 .goods-cover .imgbox ul {
   position: absolute;
-  width: 2616px;
+  width: 2340px;
   display: flex;
   /* transition: all 0.3s linear; */
   animation: loop 15s ease-in-out infinite;

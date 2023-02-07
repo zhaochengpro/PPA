@@ -130,7 +130,7 @@
 
   </template>
 
-  <img class="mute-icon" :src="isMute ? 'src/assets/images/mute.png' : 'src/assets/images/nomute.png'" @click="toggleMute" alt="">
+  <img class="mute-icon" :src="isMute ? '../src/assets/images/mute.png' : '../src/assets/images/nomute.png'" @click="toggleMute" alt="">
 
 </template>
 

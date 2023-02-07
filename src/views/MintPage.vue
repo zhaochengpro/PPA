@@ -40,8 +40,7 @@
                 - {{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}
                 </h2>
               <div class="ms">
-                Pressure Pig Association is a project on Ethereum with a total of 9,999 and a launch date of March-April
-                2023. More than one hundred different traits. Keep tuning for further info!
+                Pressure Pig Association is a project on Ethereum with a total of 9,999 NFTs and 30% Whitelist. Launch date between March-April 2023. More than one hundred different traits. Keep tuning for further info!
               </div>
             </div>
             <div class="item price">
