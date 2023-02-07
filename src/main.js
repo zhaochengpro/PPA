@@ -7,11 +7,12 @@ import store from './store';
 import { setupI18n } from './locales';
 import 'element-plus/dist/index.css';
 import ElementPlus from 'element-plus';
+import eventBus from 'vue3-eventbus'
 
 const app = createApp(App);
 
 setupI18n(app);
 
 app.use(ElementPlus, { size: 'small', zIndex: 3000 });
-
+app.use(eventBus)
 app.use(store).use(router).mount('#app');

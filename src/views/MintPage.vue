@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay>
+    <video loop autoplay :muted="isMute">
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
@@ -36,7 +36,9 @@
           </div>
           <div class="goods-info">
             <div class="item goods-name">
-              <h2>{{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}</h2>
+              <h2>PPA NFT 
+                - {{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}
+                </h2>
               <div class="ms">
                 Pressure Pig Association is a project on Ethereum with a total of 9,999 and a launch date of March-April
                 2023. More than one hundred different traits. Keep tuning for further info!
@@ -50,7 +52,20 @@
                   <Skeleton />
                 </span>
                 <span v-else>
-                  {{ price }} ETH
+                  <!-- {{ price }} ETH -->
+                  TBA
+                </span>
+              </span>
+            </div>
+            <div class="item price">
+              <span>Total</span>
+
+              <span style="position:relative;display:inline-block;">
+                <span v-if="price == -1" style="display:inline-block;height:13px;width:80px">
+                  <Skeleton />
+                </span>
+                <span v-else>
+                  {{ stage == 1 ? freeMinted : publicMinted }} / {{ stage == 1 ? freeMintAmount : publicMintAmount }}
                 </span>
               </span>
             </div>
@@ -72,18 +87,18 @@
               </div>
             </div>
             <div class="item count">
-              <span>{{ t("market.count") }}</span> <span>
+              <span>Cost</span> <span>
                 {{ fixedNumber(count * price) }}
               </span>
               <button :class="status == 3 ? 'submit-btn b am disabled' : 'submit-btn b am'"
-                :style="{ opacity: status === 3 || count == 0 ? '0.3' : '1' }" :disabled="status === 3 || count == 0"
+                :style="{ opacity: status === 3 || count == 0 || (stage == 1 && !isWL ) ? '0.3' : '1' }" :disabled="status === 3 || count == 0"
                 @click="count == 0 ? null : buyHandle()">
                 <template v-if="status === 3">
                   <img class="loading" src="@/assets/images/loading.png" alt="" srcset="" />
                 </template>
                 <template v-else>
                   <span style="vertical-align:middle">{{
-                    t("market.purchase")
+                    stage == 1 && !isWL ? "No eligable" : t("market.purchase")
                   }}</span>
                 </template>
 
@@ -166,7 +181,9 @@ import { formatBuffer, fixedNumber } from '@/utils/';
 import { useStore } from 'vuex';
 import Message from '@/components/Message.vue';
 import { caculateProof } from "@/utils/merkleProof.js";
+import whitelist from "@/config/whitelist.json";
 import { ElButton, ElDialog } from 'element-plus'
+import { bus } from 'vue3-eventbus';
 
 const store = useStore();
 const visible = ref(false)
@@ -180,12 +197,15 @@ const showTips = ref(false);
 const content = ref('');
 const stage = ref(0);
 const price = ref(0)
-const freeMinted = ref(0);
-const publicMinted = ref(0);
+const freeMintedByAccount = ref(0);
+const publicMintedByAccount = ref(0);
 const account = ref("");
+const isWL = ref(false)
 watch(() => store.state.web3Modal.account, (newValue) => {
   if (newValue) {
     account.value = newValue;
+    // console.log(, newValue)
+    isWL.value = whitelist.includes(newValue)
     init();
   }
 }, { immediate: true });
@@ -193,18 +213,61 @@ const surplus = ref(0)
 
 
 async function init() {
-  publicMinted.value = 0;
-  freeMinted.value = 0;
+  publicMintedByAccount.value = 0;
+  freeMintedByAccount.value = 0;
   total.value = 0;
   count.value = 0;
   status.value = 0;
   store.dispatch("callFreeMintStatus")
   store.dispatch("callPublicMintStatus")
+  store.dispatch("callFreeMinted")
+  store.dispatch("callPublicMinted")
+  store.dispatch("callFreeMintAmount")
+  store.dispatch("callPublicMintAmount")
 }
+
+const freeMinted = ref(0)
+const publicMinted = ref(0)
+const freeMintAmount = ref(0)
+const publicMintAmount = ref(0)
+const isMute = ref(false);
+onMounted(() => {
+  isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+})
+
+bus.on("toggleMute", (val) => {
+  isMute.value = val;
+})
+
+
+watch(() => store.getters.getFreeMinted, (newValue) => {
+  if (newValue) {
+    freeMinted.value = newValue;
+  }
+})
+
+watch(() => store.getters.getPublicMinted, (newValue) => {
+  if (newValue) {
+    publicMinted.value = newValue;
+  }
+})
+
+watch(() => store.getters.getFreeMintAmount, (newValue) => {
+  if (newValue) {
+    freeMintAmount.value = newValue;
+  }
+})
+
+watch(() => store.getters.getPublicMintAmount, (newValue) => {
+  if (newValue) {
+    publicMintAmount.value = newValue;
+  }
+})
+
 
 watch(() => store.getters.getFreeMintedByAccount, (newValue) => {
   if (newValue) {
-    freeMinted.value = newValue;
+    freeMintedByAccount.value = newValue;
     surplus.value = max.value - newValue;
     console.log(surplus.value, newValue, max.value)
   }
@@ -212,7 +275,7 @@ watch(() => store.getters.getFreeMintedByAccount, (newValue) => {
 
 watch(() => store.getters.getPublicMintedByAccount, (newValue) => {
   if (newValue) {
-    publicMinted.value = newValue;
+    publicMintedByAccount.value = newValue;
     surplus.value = max.value - newValue;
     console.log(surplus.value, newValue, max.value)
   }

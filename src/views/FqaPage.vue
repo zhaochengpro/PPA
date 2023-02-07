@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay>
+    <video loop autoplay :muted="isMute">
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
@@ -238,10 +238,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Header from '@/components/Header.vue';
 import { useI18n } from '@/locales';
 import { ElButton, ElDialog } from 'element-plus'
+import { bus } from 'vue3-eventbus';
 
 const t = useI18n();
 const activeCard = ref(-1);
@@ -257,6 +258,15 @@ function cardChange(index) {
 
 }
 
+const isMute = ref(false)
+
+onMounted(() => {
+  isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+})
+
+bus.on("toggleMute", (val) => {
+  isMute.value = val;
+})
 
 const showServices = () => {
   visible.value = true

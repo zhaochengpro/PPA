@@ -1508,8 +1508,18 @@ button:disabled {
     transition: all 0.3s linear;
     animation: breath 1s infinite;
     overflow: hidden;
+    background: #302f2f7d;
 }
 
+
+.mute-icon {
+  z-index: 1000;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 30px;
+    cursor: pointer;
+}
 .goods-buy::before {
   display: block;
   content: "";
@@ -1556,11 +1566,11 @@ button:disabled {
 }
 
 .goods-buy .goods-info > .item + .item {
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .goods-buy .goods-info h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #e86a80;

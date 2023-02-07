@@ -127,7 +127,11 @@
       </div>
 
     </div>
+
   </template>
+
+  <img class="mute-icon" :src="isMute ? 'src/assets/images/mute.png' : 'src/assets/images/nomute.png'" @click="toggleMute" alt="">
+
 </template>
 
 <script setup>
@@ -137,7 +141,7 @@ import { useStore } from 'vuex';
 import { computed, nextTick, watch, onMounted, ref, unref } from 'vue';
 import { changeLocale, useI18n } from '@/locales';
 import { getQueryVariable, formatAccount } from "@/utils";
-
+import bus from 'vue3-eventbus'
 const t = useI18n();
 const messageStatus = ref("")
 const store = useStore();
@@ -173,7 +177,7 @@ const activeLocale = ref('zh');
 const menuSwitch = ref(false);
 const inviterVisible = ref(false);
 let inviterAccount = ref('');
-
+const isMute = ref(window.localStorage.getItem("isMute") == null ? false : eval(window.localStorage.getItem("isMute")))
 const account = computed(() => store.state.web3Modal.account);
 const isConnected = computed(() => store.getters.isConnected);
 const curLocale = computed(() => {
@@ -188,7 +192,6 @@ const curLocale = computed(() => {
 
 
 onMounted(() => {
-
   activeLocale.value = localStorage.getItem('language') || 'en';
 
   nextTick(async () => {
@@ -219,6 +222,12 @@ function changeMenuSwitch(data) {
   store.commit('setMenuSwitch', data);
 }
 
+function toggleMute(){
+  isMute.value = !isMute.value
+  bus.emit('toggleMute', isMute.value)
+  window.localStorage.setItem("isMute", isMute.value);
+}
+
 </script>
 
 <style lang="scss" scoped>
@@ -241,5 +250,13 @@ function changeMenuSwitch(data) {
     background: none;
     padding: 0 10px 0 10px;
   }
+}
+.mute-icon {
+  z-index: 1000;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 30px;
+    cursor: pointer;
 }
 </style>
