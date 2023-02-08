@@ -18,8 +18,8 @@
 
       <div class="tools-bar">
         <ul class="options">
-          <li><a class="link0" href="#"></a></li>
-          <li><a class="link1" href="#"></a></li>
+          <li><a class="link0" target="_blank" href="https://discord.gg/T4eFyDz7"></a></li>
+          <li><a class="link1" target="_blank" href="https://twitter.com/PressurePig"></a></li>
           <li><a class="link2" href="#"></a></li>
           <li><a class="link3" href="#"></a></li>
         </ul>
