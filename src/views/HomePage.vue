@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay :muted="isMute">
+    <video loop autoplay preload="auto" :muted="isMute">
       <source src="@/assets/index.mp4" type="video/mp4"/>
 
     </video>
