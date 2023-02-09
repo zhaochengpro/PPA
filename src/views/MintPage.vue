@@ -320,26 +320,26 @@ watch(() => store.getters.getFreeMinted, (newValue) => {
   if (newValue) {
     freeMinted.value = newValue;
   }
-})
+},{immediate:true})
 
 watch(() => store.getters.getPublicMinted, (newValue) => {
   if (newValue) {
     publicMinted.value = newValue;
   }
-})
+},{immediate:true})
 
 watch(() => store.getters.getFreeMintAmount, (newValue) => {
   if (newValue) {
     freeMintAmount.value = newValue;
   }
-})
+},{immediate:true})
 
 watch(() => store.getters.getPublicMintAmount, (newValue) => {
   if (newValue) {
     console.log("publicMintAmount", publicMintAmount)
     publicMintAmount.value = newValue;
   }
-})
+}, {immediate:true})
 
 
 watch(() => store.getters.getFreeMintedByAccount, (newValue) => {
