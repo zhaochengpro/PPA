@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay :muted="isMute">
+    <video loop autoplay muted>
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
@@ -9,6 +9,10 @@
     <div class="container">
       <div class="tab-content">
         <div class="goods-buy">
+          <div class="tab">
+            <span :class="tab == 1 ? 'active' : null" @click="changeTab(1)">WL MINT</span>
+            <span :class="tab == 2 ? 'active' : null" @click="changeTab(2)">PUBLIC MINT</span>
+          </div>
           <div class="goods-cover">
             <div class="imgbox">
               <ul>
@@ -34,13 +38,12 @@
 
             </div>
           </div>
-          <div class="goods-info">
+          <div class="goods-info active" v-if="tab == 1">
             <div class="item goods-name">
-              <h2>PPA NFT 
-                - {{ stage == 0 ? "Already Ended" : (stage == 1 ? "WL Mint" : "Public Sale") }}
-                </h2>
+              <h2>PPA NFT</h2>
               <div class="ms">
-                Pressure Pig Association is a project on Ethereum with a total of 9,999 NFTs and 30% Whitelist. Launch date between March-April 2023. More than one hundred different traits. Keep tuning for further info!
+                Pressure Pig Association is a project on Ethereum with a total of 9,999 NFTs and a 30% Whitelist. If you're feeling stressed, Mint PPA NFTs, join Piggy's Shelter for solace! Keep tuning in for further info!
+                <p>Launch date: March-April 2023</p>
               </div>
             </div>
             <div class="item price">
@@ -64,7 +67,7 @@
                   <Skeleton />
                 </span>
                 <span v-else>
-                  {{ stage == 1 ? freeMinted : publicMinted }} / {{ stage == 1 ? freeMintAmount : publicMintAmount }}
+                  {{freeMinted }} / {{freeMintAmount}}
                 </span>
               </span>
             </div>
@@ -97,13 +100,87 @@
                 </template>
                 <template v-else>
                   <span style="vertical-align:middle">{{
-                    stage == 1 && !isWL ? "No eligable" : t("market.purchase")
+                    stage == 1 && !isWL ? "No eligable" : "Mint"
                   }}</span>
                 </template>
 
               </button>
             </div>
           </div>
+
+
+
+          <div class="goods-info active" v-else-if="tab == 2">
+            <div class="item goods-name">
+              <h2>PPA NFT</h2>
+              <div class="ms">
+                Pressure Pig Association is a project on Ethereum with a total of 9,999 NFTs and a 30% Whitelist. If you're feeling stressed, Mint PPA NFTs, join Piggy's Shelter for solace! Keep tuning in for further info!
+                <p>Launch date: March-April 2023</p>
+              </div>
+            </div>
+            <div class="item price">
+              <span>{{ t("market.price") }}</span>
+
+              <span style="position:relative;display:inline-block;">
+                <span v-if="price == -1" style="display:inline-block;height:13px;width:80px">
+                  <Skeleton />
+                </span>
+                <span v-else>
+                  <!-- {{ price }} ETH -->
+                  TBA
+                </span>
+              </span>
+            </div>
+            <div class="item price">
+              <span>Total</span>
+
+              <span style="position:relative;display:inline-block;">
+                <span v-if="price == -1" style="display:inline-block;height:13px;width:80px">
+                  <Skeleton />
+                </span>
+                <span v-else>
+                  {{ publicMinted }} / {{ publicMintAmount }}
+                </span>
+              </span>
+            </div>
+            <div class="item amount">
+              <span>{{ t("market.amount") }}</span>
+              <div class="form-box">
+
+                <div class="counter">
+                  <button class="operation-btn" :class="{ disabled: count < 1 }" :disabled="count < 1"
+                    @click="subtract">
+                    -
+                  </button>
+                  <input type="number" v-model="count" />
+                  <button class="operation-btn" :class="{ disabled: count >= surplus }" :disabled="count >= surplus"
+                    @click="add">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="item count">
+              <span>Cost</span> <span>
+                {{ fixedNumber(count * price) }}
+              </span>
+              <button :class="status == 3 ? 'submit-btn b am disabled' : 'submit-btn b am'"
+                :style="{ opacity: status === 3 || count == 0 || (stage == 1 && !isWL ) ? '0.3' : '1' }" :disabled="status === 3 || count == 0"
+                @click="count == 0 ? null : buyHandle()">
+                <template v-if="status === 3">
+                  <img class="loading" src="@/assets/images/loading.png" alt="" srcset="" />
+                </template>
+                <template v-else>
+                  <span style="vertical-align:middle">{{
+                    stage == 1 && !isWL ? "No eligable" : "Mint"
+                  }}</span>
+                </template>
+
+              </button>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -259,6 +336,7 @@ watch(() => store.getters.getFreeMintAmount, (newValue) => {
 
 watch(() => store.getters.getPublicMintAmount, (newValue) => {
   if (newValue) {
+    console.log("publicMintAmount", publicMintAmount)
     publicMintAmount.value = newValue;
   }
 })
@@ -375,7 +453,12 @@ const buyHandle = async () => {
     closeMessage()
   }
 };
-
+const tab = ref(1)
+const changeTab = (index) => {
+  // int.value = 0;
+  init()
+  tab.value = index
+}
 const showServices = () => {
   visible.value = true
 }
@@ -404,6 +487,58 @@ html {
 
 }
 
+
+.goods-buy{
+  overflow: visible;
+  .tab {
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    // transform: rotateZ(90deg);
+
+    span {
+      display: inline-block;
+      height: 50px;
+      background: #ccc;
+      text-align: center;
+      line-height: 50px;
+      padding: 0px 10px;
+      padding-top: 0;
+      padding-bottom: 0;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    span.active {
+      background: pink;
+    }
+
+    span:hover {
+      // transform: scale(1.1);
+      transform: translateX(-10px);
+    }
+  }
+}
+
+.goods-info.active {
+  animation: switch 0.3s ease-in-out
+}
+
+@keyframes switch {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .video_content {
   position: absolute;
   z-index: -1;

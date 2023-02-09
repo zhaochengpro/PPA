@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay :muted="isMute">
+    <video loop autoplay muted>
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
@@ -52,12 +52,7 @@
             </span>
           </div>
           <div class="member-info">
-            Graduated from UPM and after working in the traditional industry for years, Kyle found that his career still
-            hadn't taken off. He hated the atmosphere of the workplace - everyone was working overtime ineffectively and
-            kissing the boss's ass. At a chance web3 party, Kyle met Oscar and Steven. The like-minded trio decided to
-            quit their jobs and use all their savings to do this project. PPA is actually a reflection of each of us,
-            because everyone has their own pressure! That's why we need PPA, where we understand each other, embrace
-            each other, encourage each other, and face all kinds of stress in real life together!
+            Graduated from UPM and after working in the traditional industry for years, Kyle found that his career still hadn't taken off. He hated the atmosphere of the workplace - everyone was working overtime ineffectively and kissing the boss's ass. At a chance web3 party, Kyle met Oscar and Steven. The like-minded trio decided to quit their jobs and use all their savings to do this project. PPA is a reflection of each of us because everyone has their pressure! That's why we need PPA, where we understand each other, embrace each other, encourage each other, and face all kinds of stress in real life together!
           </div>
         </div>
       </div>

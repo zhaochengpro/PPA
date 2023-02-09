@@ -69,7 +69,7 @@ const PressurePigAssociationStore = {
       commit("setFreeMintAmount", amount);
     },
     async callPublicMintAmount({state, commit}) {
-      let amount = await state.contract.methods.pubicMintAmount().call();
+      let amount = await state.contract.methods.publicMintAmount().call();
       commit("setPublicMintAmount", amount)
     },
     async callFreeMinted({state, commit}){

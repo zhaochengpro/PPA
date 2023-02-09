@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay preload="auto" :muted="isMute">
+    <video loop autoplay :muted="isMute">
       <source src="@/assets/index.mp4" type="video/mp4"/>
 
     </video>
@@ -26,6 +26,7 @@ function toAuction() {
 }
 
 onMounted(() => {
+  // isMute.value = false;
   isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
 })
 

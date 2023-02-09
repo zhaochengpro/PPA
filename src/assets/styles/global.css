@@ -1501,7 +1501,7 @@ button:disabled {
     box-sizing: content-box;
     font-size: 18px;
     box-shadow: 1px 1px 15px #fff;
-    border-radius: 32px;
+    /* border-radius: 32px; */
     border: 1px solid #fff;
     padding: 52px;
     margin: 0 auto;
@@ -1558,11 +1558,13 @@ button:disabled {
 .goods-buy .goods-cover .imgbox {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   border-right: 1px solid #fff;
 }
 
 .goods-buy .goods-info {
   flex: 1;
+  margin-top: -20px;
 }
 
 .goods-buy .goods-info > .item + .item {

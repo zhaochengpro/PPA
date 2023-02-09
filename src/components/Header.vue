@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="central">
         <router-link to="/" class="logo" @click="changeMenuSwitch(false)">
-          <img src="@/assets/images/logo.jpg" alt="">
+          <img src="@/assets/images/logo.png" alt="">
         </router-link>
         <div class="nav">
           <ul class="nav-menu">
