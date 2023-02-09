@@ -306,9 +306,12 @@ const freeMinted = ref(0)
 const publicMinted = ref(0)
 const freeMintAmount = ref(0)
 const publicMintAmount = ref(0)
-const isMute = ref(false);
+const isMute = ref(true);
 onMounted(() => {
-  isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+  setTimeout(() => {
+    isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+  }, 1000)
+  
 })
 
 bus.on("toggleMute", (val) => {
