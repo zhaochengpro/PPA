@@ -179,7 +179,7 @@ const activeLocale = ref('zh');
 const menuSwitch = ref(false);
 const inviterVisible = ref(false);
 let inviterAccount = ref('');
-const isMute = ref(window.localStorage.getItem("isMute") == null ? false : eval(window.localStorage.getItem("isMute")))
+const isMute = ref(true);
 const account = computed(() => store.state.web3Modal.account);
 const isConnected = computed(() => store.getters.isConnected);
 const curLocale = computed(() => {
@@ -226,7 +226,6 @@ function changeMenuSwitch(data) {
 function toggleMute(){
   isMute.value = !isMute.value
   bus.emit('toggleMute', isMute.value)
-  window.localStorage.setItem("isMute", isMute.value);
 }
 
 </script>
