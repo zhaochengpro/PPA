@@ -1,11 +1,13 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay preload="auto" :muted="isMute">
+    <video loop autoplay preload="auto" id="ppa-video" muted>
       <source src="@/assets/index.mp4" type="video/mp4"/>
-
     </video>
 
+    <audio loop autoplay id="ppa-audio">
+      <source src="@/assets/bg.mp3" type="audio/mpeg"/>
+    </audio>
   </div>
 </template>
 
@@ -18,7 +20,7 @@ import bus from 'vue3-eventbus'
 
 const t = useI18n();
 const router = useRouter();
-const isMute = ref(false);
+const isMute = ref(true);
 
 
 function toAuction() {
@@ -26,12 +28,28 @@ function toAuction() {
 }
 
 onMounted(() => {
-  // isMute.value = false;
+  // document.getElementById("ppa-video").muted = false;
+  window.localStorage.setItem("isMute", false)
   isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+  console.log("xxx", window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute")))
+  setTimeout(() => {
+
+  }, 1000)
+
+  // document.getElementById("ppa-video").muted = true;
+  //   document.getElementById("ppa-video").muted = false;
+
+  
 })
 
 bus.on("toggleMute", (val) => {
   isMute.value = val;
+  console.log(document.getElementById("ppa-audio"), val);
+
+  if (!val) document.getElementById("ppa-audio").play();
+  else document.getElementById("ppa-audio").pause();
+  // document.getElementById("ppa-video").setAttribute("muted", false);
+  // document.getElementById("ppa-video").play();
 })
 
 </script>

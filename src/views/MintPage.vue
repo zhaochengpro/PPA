@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="video_content">
-    <video loop autoplay muted>
+    <video loop autoplay muted id="ppa-video">
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
   </div>
@@ -308,10 +308,13 @@ const freeMintAmount = ref(0)
 const publicMintAmount = ref(0)
 const isMute = ref(true);
 onMounted(() => {
-  setTimeout(() => {
-    isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
-  }, 1000)
-  
+
+
+  // setTimeout(() => {
+  //   isMute.value = window.localStorage.getItem("isMute") == null ? false :  eval(window.localStorage.getItem("isMute"))
+  // }, 1000)
+
+
 })
 
 bus.on("toggleMute", (val) => {
