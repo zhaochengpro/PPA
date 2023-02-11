@@ -37,11 +37,10 @@ onMounted(() => {
   let audio = document.getElementById("ppa-audio");
   audio.oncanplay = function () {
     console.log("canplay")
-
+    document.body.click();
+    audio.play()
   }
-  document.body.addEventListener("mousemove", function () {
-      audio.play()
-    })
+  
 
   audio.onplay = () => {
     console.log("playing")
