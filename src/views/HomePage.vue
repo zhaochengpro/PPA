@@ -29,7 +29,7 @@ function toAuction() {
 
 onMounted(() => {
   // document.getElementById("ppa-video").muted = false;
-  window.localStorage.setItem("isMute", false)
+  window.localStorage.setItem("isMute", true)
   isMute.value = window.localStorage.getItem("isMute") == null ? false : eval(window.localStorage.getItem("isMute"))
   console.log("xxx", window.localStorage.getItem("isMute") == null ? false : eval(window.localStorage.getItem("isMute")))
 
