@@ -5,7 +5,7 @@
       <source src="@/assets/index.mp4" type="video/mp4" />
     </video>
 
-    <audio loop autoplay id="ppa-audio" muted>
+    <audio loop autoplay id="ppa-audio">
       <source src="@/assets/bg.mp3" type="audio/mpeg" />
     </audio>
   </div>
@@ -37,8 +37,9 @@ onMounted(() => {
   let audio = document.getElementById("ppa-audio");
   audio.oncanplay = function () {
     console.log("canplay")
-    audio.muted = false;
-    audio.play();
+    document.body.addEventListener("mousemove", function () {
+      audio.play()
+    })
   }
 
   audio.onplay = () => {
