@@ -80,7 +80,7 @@ bus.on("toggleMute", (val) => {
   opacity: 0.1;
   top: 35vh;
   left: 60vw;
-  cursor: context-menu;
+
   filter: brightness(0.5);
   filter: blur(100px);
   transition: all 0.1s ease-in-out;
@@ -111,8 +111,6 @@ bus.on("toggleMute", (val) => {
 }
 
 .mask:hover {
-  box-shadow: -200px 0px 100px #f00;
-  background: rgb(255, 0, 0);
-  filter: blur(100px);
+
 }
 </style>

@@ -17,22 +17,25 @@
             <div class="imgbox">
               <ul>
                 <li>
-                  <img src="@/assets/images/picture2.jpg" />
+                  <img src="@/assets/images/mint1.png" />
                 </li>
                 <li>
-                  <img src="@/assets/images/picture3.jpg" />
+                  <img src="@/assets/images/mint2.png" />
                 </li>
                 <li>
-                  <img src="@/assets/images/picture4.jpg" />
+                  <img src="@/assets/images/mint3.png" />
                 </li>
                 <li>
-                  <img src="@/assets/images/picture5.jpg" />
+                  <img src="@/assets/images/mint4.png" />
                 </li>
                 <li>
-                  <img src="@/assets/images/picture6.jpg" />
+                  <img src="@/assets/images/mint5.png" />
                 </li>
                 <li>
-                  <img src="@/assets/images/picture2.jpg" />
+                  <img src="@/assets/images/mint6.png" />
+                </li>
+                <li>
+                  <img src="@/assets/images/mint1.png" />
                 </li>
               </ul>
 

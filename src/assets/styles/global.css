@@ -1136,6 +1136,13 @@ button:disabled {
   background: url(../images/bi.png) center center / auto 20px no-repeat;
 }
 
+
+.mask:hover {
+  cursor: url('../images/search.ico'), default;
+  box-shadow: -200px 0px 100px #f00;
+  background: rgb(255, 0, 0);
+  filter: blur(100px);
+}
 .enter-form .submit-btn {
   display: flex;
   align-items: center;
@@ -2039,30 +2046,33 @@ button:disabled {
 }
 .goods-cover .imgbox ul {
   position: absolute;
-  width: 2340px;
+  width: 2730px;
   display: flex;
   /* transition: all 0.3s linear; */
   animation: loop 15s ease-in-out infinite;
 }
 
 @keyframes loop {
-  0%,15%{
+  0%,5%{
 		left: 0;
 	}
-	20%,35%{
+	15%,20%{
 		left: -100%;
 	}
-	40%,55%{
+	25%,30%{
 		left: -200%;
 	}
-	60%,75%{
+	35%,40%{
 		left: -300%;
 	}
-	80%,95%{
+	45%,50%{
 		left: -400%;
 	}
-	100%{
-		left: -500%;
+  55%, 60% {
+    left:  -500%;
+  }
+	65%{
+		left: -600%;
 	}
 }
 .checker {

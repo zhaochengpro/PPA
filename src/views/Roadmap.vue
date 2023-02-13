@@ -9,11 +9,11 @@
     <div class="container">
       <div class="roadmap">
         <div class="left-avator">
-          <img src="@/assets/images/picture2.jpg" alt="">
-          <img src="@/assets/images/picture3.jpg" alt="">
-          <img src="@/assets/images/picture4.jpg" alt="">
-          <img src="@/assets/images/picture5.jpg" alt="">
-          <img src="@/assets/images/picture6.jpg" alt="">
+          <img src="@/assets/images/roadmap.png" alt="">
+          <img src="@/assets/images/roadmap1.png" alt="">
+          <img src="@/assets/images/roadmap2.png" alt="">
+          <img src="@/assets/images/roadmap3.png" alt="">
+          <img src="@/assets/images/roadmap4.png" alt="">
         </div>
         <div class="right-scroll-view">
           <div id="timeline">
