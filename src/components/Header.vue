@@ -169,11 +169,7 @@ const localeOptions = [
   {
     label: 'EN',
     value: 'en',
-  },
-  {
-    label: '繁体',
-    value: 'zh',
-  },
+  }
 ];
 const activeLocale = ref('zh');
 const menuSwitch = ref(false);
