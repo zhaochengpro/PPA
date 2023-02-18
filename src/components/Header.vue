@@ -99,7 +99,7 @@
   </template>
   <template v-if="inviterVisible">
     <div class="masker"></div>
-    <div class="default-popu pop-invite"> 
+    <div class="default-popu pop-invite">
       <!---关闭弹窗添加class “invisible”即可，同时将div“masker” 设置“display:none”--->
       <!-- <a class="close-btn am" href="#"><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -118,8 +118,9 @@
             </div>
             <div class="form-row">
               <div class="form-element" style="padding-top: 8px;">
-                <button class="form-submit-btn inline-block am disabled"
-                  @click.prevent="submitInviter">{{ t("header.submit") }}</button>
+                <button class="form-submit-btn inline-block am disabled" @click.prevent="submitInviter">{{
+                  t("header.submit")
+                }}</button>
               </div>
             </div>
           </div>
@@ -148,7 +149,7 @@ const t = useI18n();
 const messageStatus = ref("")
 const store = useStore();
 const options = [
-  { field: 'Mint', to: '/mint'},
+  { field: 'Mint', to: '/mint' },
   { field: 'Roadmap', to: '/roadmap' },
   { field: 'Team', to: '/team' },
   { field: 'FAQs', to: '/fqa' },
@@ -219,7 +220,7 @@ function changeMenuSwitch(data) {
   store.commit('setMenuSwitch', data);
 }
 
-function toggleMute(){
+function toggleMute() {
   isMute.value = !isMute.value
   bus.emit('toggleMute', isMute.value)
 }
@@ -247,12 +248,13 @@ function toggleMute(){
     padding: 0 10px 0 10px;
   }
 }
+
 .mute-icon {
   z-index: 1000;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    width: 30px;
-    cursor: pointer;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 30px;
+  cursor: pointer;
 }
 </style>
