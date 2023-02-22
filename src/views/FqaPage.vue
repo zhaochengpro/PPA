@@ -16,8 +16,6 @@
             <div class="title">{{ t("faq.explain1") }}</div>
             <div class="content">
               <p>{{ t("faq.explain1_1") }}</p>
-              <p>{{ t("faq.explain1_2") }}</p>
-              <p>{{ t("faq.explain1_3") }}</p>
             </div>
             <a class="swtich" href="#">
               <svg :style="{ transform: activeCard === 0 ? 'rotate(0deg)' : 'rotate(90deg)' }" viewBox="0 0 1024 1024"
@@ -119,6 +117,7 @@
             <div class="title">{{ t("faq.explain8") }}</div>
             <div class="content">
               <p>{{ t("faq.explain8_1") }}</p>
+              <p>{{ t("faq.explain8_2") }}</p>
             </div>
             <a class="swtich" href="#">
               <svg :style="{ transform: activeCard === 7 ? 'rotate(0deg)' : 'rotate(90deg)' }" viewBox="0 0 1024 1024"
@@ -161,11 +160,42 @@
             <div class="title">{{ t("faq.explain11") }}</div>
             <div class="content">
               <p>{{ t("faq.explain11_1") }}</p>
-              <p>{{ t("faq.explain11_2") }}</p>
-              <p>{{ t("faq.explain11_3") }}</p>
             </div>
             <a class="swtich" href="#">
               <svg :style="{ transform: activeCard === 10 ? 'rotate(0deg)' : 'rotate(90deg)' }" viewBox="0 0 1024 1024"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M142.805333 265.173333A58.666667 58.666667 0 1 0 59.861333 348.16l410.666667 410.666667a58.666667 58.666667 0 0 0 82.944 0l410.666667-410.666667a58.666667 58.666667 0 1 0-82.944-82.986667L512 634.368 142.805333 265.173333z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <div class="column-card" :class="{ active: activeCard === 11 }" :key="0" @click.prevent="cardChange(11)">
+            <div class="title">{{ t("faq.explain12") }}</div>
+            <div class="content">
+              <p>{{ t("faq.explain12_1") }}</p>
+            </div>
+            <a class="swtich" href="#">
+              <svg :style="{ transform: activeCard === 11 ? 'rotate(0deg)' : 'rotate(90deg)' }" viewBox="0 0 1024 1024"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M142.805333 265.173333A58.666667 58.666667 0 1 0 59.861333 348.16l410.666667 410.666667a58.666667 58.666667 0 0 0 82.944 0l410.666667-410.666667a58.666667 58.666667 0 1 0-82.944-82.986667L512 634.368 142.805333 265.173333z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <div class="column-card" :class="{ active: activeCard === 12 }" :key="0" @click.prevent="cardChange(12)">
+            <div class="title">{{ t("faq.explain13") }}</div>
+            <div class="content">
+              <p>{{ t("faq.explain13_1") }}</p>
+              <br/>
+              <p>{{ t("faq.explain13_2") }}</p>
+              <br/>
+              <p>{{ t("faq.explain13_3") }}</p>
+              <br/>
+            </div>
+            <a class="swtich" href="#">
+              <svg :style="{ transform: activeCard === 12 ? 'rotate(0deg)' : 'rotate(90deg)' }" viewBox="0 0 1024 1024"
                 version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M142.805333 265.173333A58.666667 58.666667 0 1 0 59.861333 348.16l410.666667 410.666667a58.666667 58.666667 0 0 0 82.944 0l410.666667-410.666667a58.666667 58.666667 0 1 0-82.944-82.986667L512 634.368 142.805333 265.173333z">
