@@ -3,7 +3,7 @@
   <div class="video_content">
     <vue-danmaku v-model:danmus="danmus" useSlot randomChannel="true" debounce="1000" loop speeds="100">
       <template v-slot:dm="{ index, danmu }">
-        <span :style="{color:'rgb(' + danmu.color + ')'}">{{ danmu.text }}</span>
+        <span :style="{fontSize:'25px', color:'rgb(' + danmu.color + ')'}">{{ danmu.text }}</span>
       </template>
     </vue-danmaku>
     <video loop autoplay preload="auto" id="ppa-video" muted @click="hideLog">
